@@ -5,17 +5,21 @@
 :Edice: |version|
 :Autor: |author|
 :Základna: Sphinx 1.8
+:Větev: |branch|
 
 Stručný tutoriál k publikačnímu systému Sphinx v češtině.
 
 
+
 .. toctree::
    :maxdepth: 2
-   :caption: Obsah:
+   :caption: Obsah
 
    Uvod
    ZakladySphinx/index
    Syntaxe/index
+   Ladeni/index
+   Rozsireni/index
    Slovnik
 
 

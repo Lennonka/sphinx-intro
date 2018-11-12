@@ -4,7 +4,7 @@
 #
 # This file does only contain a selection of the most common options. For a
 # full list see the documentation:
-# http://www.sphinx-doc.org/en/master/config
+# http://www.sphinx-doc.org/en/stable/config
 
 # -- Path setup --------------------------------------------------------------
 
@@ -12,50 +12,35 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
+# import os
 # import sys
-import time
 # sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Úvod do Sphinxu'
-#copyright = '2018, CZ.NIC, z.s.p.o.'
-copyright = u'2016–{}, CZ.NIC, z.s.p.o.'.format(time.localtime().tm_year)
-author = 'Lena'
+project = u'MyProject'
+copyright = u'2018, John Doe'
+author = u'John Doe'
 
 # The short X.Y version
-version = '0.1'
+version = u''
 # The full version, including alpha/beta/rc tags
-release = ''
+release = u'1.0'
 
-today_fmt = '%d.%m.%Y'
-
-# Git (test kvůli CI v GitLabu)
-if 'GIT_BRANCH' in os.environ:
-   git_branch = os.environ['GIT_BRANCH']
-else:
-   git_branch = 'neznámá'
 
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-needs_sphinx = '1.8'
+# needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    #'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.extlinks',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -64,8 +49,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.rest']
-# source_suffix = '.rst'
+# source_suffix = ['.rst', '.md']
+source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -75,41 +60,29 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'cs'
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+# This pattern also affects html_static_path and html_extra_path .
+exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'sphinx'
 
-# Custom substitutions
-rst_prolog = """
-.. |author| replace:: {}
-
-.. |branch| replace:: {}
-""".format(author, git_branch)
-
-# Include warnings in output
-keep_warnings = True
 
 # -- Options for HTML output -------------------------------------------------
-
-# Title
-html_title = project + ' v' + version
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'bizstyle'
+html_theme = 'haiku'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+#html_theme_options = {"nosidebar": True}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -126,22 +99,30 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-# A dictionary of values to pass into the template engine’s context for all pages
-# html_context = {}
+
+# -- Options for HTMLHelp output ---------------------------------------------
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'MyProjectdoc'
+
 
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
+    #
     # 'papersize': 'letterpaper',
 
     # The font size ('10pt', '11pt' or '12pt').
+    #
     # 'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
+    #
     # 'preamble': '',
 
     # Latex figure (float) alignment
+    #
     # 'figure_align': 'htbp',
 }
 
@@ -149,45 +130,36 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SphinxIntro.tex', project, author, 'manual', True),
-    #('ZakladySphinx/index', 'Sphinx1-Zaklady.tex', 'Sphinx - Základy',
-    #    author, 'manual'),
-    #('Syntaxe/index', 'Sphinx2-Syntaxe.tex', 'Sphinx - Syntaxe',
-    #    author, 'manual'),
-    #('Rozsireni/index', 'Sphinx3-Rozsireni.tex', 'Sphinx - Rozšíření',
-    #    author, 'manual'),
+    (master_doc, 'MyProject.tex', u'MyProject Documentation',
+     u'John Doe', 'manual'),
 ]
 
-# -- Options for Epub output -------------------------------------------------
 
-# Bibliographic Dublin Core info.
-epub_title = project
+# -- Options for manual page output ------------------------------------------
 
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#
-# epub_identifier = ''
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [
+    (master_doc, 'myproject', u'MyProject Documentation',
+     [author], 1)
+]
 
-# A unique identification for the text.
-#
-# epub_uid = ''
 
-# A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
+# -- Options for Texinfo output ----------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+    (master_doc, 'MyProject', u'MyProject Documentation',
+     author, 'MyProject', 'One line description of project.',
+     'Miscellaneous'),
+]
 
 
 # -- Extension configuration -------------------------------------------------
-
-# -- Options for intersphinx extension ---------------------------------------
-
-# Example configuration for intersphinx: refer to the Python standard library.
-#intersphinx_mapping = {'https://docs.python.org/': None}
 
 # -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-
-# -- Options for extlinks extension ------------------------------------------
-extlinks = {'sphinx': ('https://www.sphinx-doc.org/en/1.8/%s',
-                      'Sphinx Doc: ')}

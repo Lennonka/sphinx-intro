@@ -5,6 +5,9 @@ Soubory ve formátu reStructuredText se nejčastěji ukládají s koncovkou
 :file:`.rst`. Lze použít více různých koncovek, které nadefinujete
 v konfiguraci projektu.
 
+.. Tip:: Můžete například rozlišit soubory v "čistém" rST jako :file:`.rst`
+   a soubory s jazykovými rozšířeními Sphinxu jako :file:`.srst`.
+
 .. Note:: Sphinx umí načítat i soubory ve formátu MarkDown. Viz dokumentace.
 
 Kódování
@@ -12,12 +15,6 @@ Kódování
 
 Sphinx ve výchozí konfiguraci pracuje s **UTF-8**. Lze nastavit i jiné kódování,
 ale je nutné, aby všechny zdrojové soubory byly uloženy ve stejném kódování.
-
-.. rubric:: Poznámka k Python 2
-
-Pokud v konfiguračním souboru :file:`conf.py` pracujete s řetězci, které
-obsahují ne-ASCII znaky (obvykle znaky s diakritikou), musíte tyto řetězce
-označit jako unicode řetězce, např.: ``u'Příliš žluťoučký kůň...'``.
 
 Odsazení řádků
 --------------
