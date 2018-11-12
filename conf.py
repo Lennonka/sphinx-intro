@@ -28,7 +28,7 @@ version = '0.1'
 # The full version, including alpha/beta/rc tags
 release = ''
 
-#today_fmt = ''
+today_fmt = '%d.%m.%Y'
 
 # -- General configuration ---------------------------------------------------
 
