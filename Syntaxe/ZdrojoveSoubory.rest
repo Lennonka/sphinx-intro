@@ -1,0 +1,62 @@
+Zdrojové soubory
+================
+
+Soubory ve formátu reStructuredText se nejčastěji ukládají s koncovkou
+:file:`.rst`. Lze použít více různých koncovek, které nadefinujete
+v konfiguraci projektu.
+
+.. Note:: Sphinx umí načítat i soubory ve formátu MarkDown. Viz dokumentace.
+
+Kódování
+--------
+
+Sphinx ve výchozí konfiguraci pracuje s **UTF-8**. Lze nastavit i jiné kódování,
+ale je nutné, aby všechny zdrojové soubory byly uloženy ve stejném kódování.
+
+.. rubric:: Poznámka k Python 2
+
+Pokud v konfiguračním souboru :file:`conf.py` pracujete s řetězci, které
+obsahují ne-ASCII znaky (obvykle znaky s diakritikou), musíte tyto řetězce
+označit jako unicode řetězce, např.: ``u'Příliš žluťoučký kůň...'``.
+
+Odsazení řádků
+--------------
+
+Syntaxe je založena na filosofii Pythonu,
+tudíž **záleží na odsazení řádků** a je potřeba si to hlídat.
+
+Někdy lze chybu v odsazení odhalit z chybového výpisu při buildu,
+ale jindy nemusí být zcela zřejmé, kde se chyba vyskytuje.
+
+Komentáře
+---------
+
+Do komentářů lze umístit obsah, který nechcete mít viditelný ve výstupu,
+ale chcete ho mít na očích ve zdrojovém kódu.
+
+.. code-block:: rst
+   :caption: Ukázka komentáře
+
+   .. text komentáře
+
+      Tohle je stále ještě zakomentované.
+
+   Tohle už je běžný odstavec.
+
+.. caution:: Do komentářů se nedoporučuje vkládat informace důvěrného
+   nebo interního charakteru, distribuují se totiž do HTML výstupů jako
+   komentáře v HTML!
+
+   Z téhož důvodu komentáře nesmí obsahovat sekvenci ``--``, což by
+   zapříčinilo nevalidní syntaxi HTML.
+   
+   .. ??? nejde to vypnout?
+
+.. text komentáře
+
+   Tohle je stále ještě zakomentované.
+
+.. tip:: Pokud potřebujete (ne)publikovat obsah na základě nějakých podmínek,
+   např. pro různé konfigurace téhož systému,
+   existuje pro to rozšíření *ifconfig*, o kterém se pojednává v pozdější
+   kapitole.

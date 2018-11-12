@@ -1,0 +1,7 @@
+Slovník
+=======
+
+.. glossary::
+
+   reST
+      reStructuredText
