@@ -1,8 +1,6 @@
 Úvod
 ====
 
-bla.
-
 Něco o Docutils.
 
 `Docutils: Introductory & Tutorial Material for End-Users
@@ -10,4 +8,4 @@ Něco o Docutils.
 
 .. Note:: Tento tutoriál pracuje pouze s výstupy do HTML a LaTeX/PDF.
 
-http://docutils.sourceforge.net/docs/user/rst/demo.html
+Kompletní dokumentace ke Sphinx: :sphinx:`Sphinx documentation contents <contents.html>`

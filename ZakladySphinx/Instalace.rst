@@ -8,5 +8,5 @@ příkazem:
 
    pip install Sphinx
 
-Pokud vám tato možnost z nějakého důvodu nevyhovuje, v dokumentaci jsou popsány
+Pokud vám tento způsob z nějakého důvodu nevyhovuje, v dokumentaci jsou popsány
 další možnosti instalace, viz :sphinx:`usage/installation.html`.

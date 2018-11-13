@@ -6,9 +6,10 @@ Soubory ve formátu reStructuredText se nejčastěji ukládají s koncovkou
 v konfiguraci projektu.
 
 .. Tip:: Můžete například rozlišit soubory v "čistém" rST jako :file:`.rst`
-   a soubory s jazykovými rozšířeními Sphinxu jako :file:`.srst`.
+   a soubory s jazykovými prvky Sphinxu jako :file:`.srst`.
 
-.. Note:: Sphinx umí načítat i soubory ve formátu MarkDown. Viz dokumentace.
+.. Note:: Sphinx umí načítat i soubory ve formátu MarkDown.
+   Viz :sphinx:`usage/markdown.html`.
 
 Kódování
 --------
@@ -46,7 +47,7 @@ ale chcete ho mít na očích ve zdrojovém kódu.
 
    Z téhož důvodu komentáře nesmí obsahovat sekvenci ``--``, což by
    zapříčinilo nevalidní syntaxi HTML.
-   
+
    .. ??? nejde to vypnout?
 
 .. text komentáře

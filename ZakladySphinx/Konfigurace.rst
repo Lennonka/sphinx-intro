@@ -41,7 +41,7 @@ souborů nebo název kořenového souboru.
 
 .. rubric:: Options for HTML output
 
-Volby výstupu HTML jako motiv a jeho nastavení, titul, logo, favikona,
+Volby výstupu do HTML jako motiv a jeho nastavení, titul, logo, favikona,
 vlastní styly, nastavení vyhledávače, předání dalších parametrů šablonovacímu
 systému (kontext) a mnoho dalších.
 
@@ -94,4 +94,3 @@ Kouzla s Pythonem
    rst_prolog = """
    .. |branch| replace:: {}
    """.format(git_branch)
-

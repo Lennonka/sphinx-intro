@@ -189,5 +189,8 @@ epub_exclude_files = ['search.html']
 todo_include_todos = True
 
 # -- Options for extlinks extension ------------------------------------------
-extlinks = {'sphinx': ('https://www.sphinx-doc.org/en/1.8/%s',
-                      'Sphinx Doc: ')}
+extlinks = {
+    'sphinx': ('https://www.sphinx-doc.org/en/1.8/%s', 'Sphinx Doc: '),
+    'rstref': ('http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#%s', 'rST Ref: '),
+    'rstdir': ('http://docutils.sourceforge.net/docs/ref/rst/directives.html#%s', 'rST Ref: '),
+}

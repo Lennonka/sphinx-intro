@@ -12,8 +12,7 @@ Welcome to Muj Projekt's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. UvodniKapitola
-.. SlozitejsiKapitola/index
+
 
 Indices and tables
 ==================

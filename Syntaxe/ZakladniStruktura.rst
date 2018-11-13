@@ -1,49 +1,62 @@
 Základní struktura
 ==================
 
+Každý zdrojový soubor musí mít hlavní nadpis.
+
 Nadpisy
 -------
 
-Každý soubor musí mít nadpis.
+Nadpisy definují strukturu dokumentu čili jeho členění na menší oddíly
+jako jsou kapitoly, sekce a podsekce.
 
-Nadpis musi byt podtržen jednímz přípustných znaků alespoň v takové délce,
-jakou má nadpis.
-
-.. code-block:: rest
-
-	Nadpis
-	======
-
-	Odstavec.
-
+Nadpis musí být podtržen jedním z přípustných znaků alespoň v takové délce,
+jakou má text nadpisu.
 
 .. code-block:: none
-   :caption: Znaky přípustné pro podtržení nadpisu
+   :caption: Znaky přípustné pro podtržení nadpisů (doporučená podmnožina)
 
    = - ` : ' " ~ ^ _ * + # < >
 
-Odstavce
---------
+Kde začíná nadpis oddílu určité úrovně, tam končí předchozí oddíl též úrovně.
+Úrovně oddílů jsou odlišeny podtržením nadpisů.
 
-Odstavec.
+.. code-block:: rest
+   :caption: Ilustrace jednoduchého dokumentu
 
-   Odsazený odstavec. Vhodné pro blokovou citaci. (``blockquote``)
+   =====
+   Titul
+   =====
 
-Další odstavec.
+   --------
+   Podtitul
+   --------
 
-| Odstavec,
-| který zachovává
-| zalomení řádků.
+   Název kapitoly
+   ==============
 
-   | Odsazený odstavec,
-   | který zachovává
-   | zalomení řádků.
+   Blok+
 
-Seznamy
--------
+   Název sekce
+   -----------
 
-Tabulky
--------
+   Blok+
 
-Direktivy
----------
+   Podsekce
+   ^^^^^^^^
+
+   Blok+
+
+   Další podsekce
+   ^^^^^^^^^^^^^^
+
+   Blok+
+
+   Další sekce
+   -----------
+
+   Blok+
+
+Je vhodné zavést si konvenci pro jednotné použití znaků pro jednotlivé
+úrovně nadpisů.
+
+Tělo oddílu je tvořeno buď dalšími oddíly nebo :doc:`bloky <Bloky>`.

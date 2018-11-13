@@ -15,3 +15,12 @@ LaTeX
        ('Rozsireni/index', 'Sphinx3-Rozsireni.tex', 'Sphinx - Rozšíření',
          author, 'manual'),
    ]
+
+Tabulky
+-------
+
+.. code-block:: rst
+
+   .. tabular-columns:: ...
+
+:sphinx:`usage/restructuredtext/directives.html#directive-tabularcolumns`

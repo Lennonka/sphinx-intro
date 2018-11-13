@@ -4,7 +4,7 @@
 #
 # This file does only contain a selection of the most common options. For a
 # full list see the documentation:
-# http://www.sphinx-doc.org/en/stable/config
+# http://www.sphinx-doc.org/en/master/config
 
 # -- Path setup --------------------------------------------------------------
 
@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'MyProject'
-copyright = u'2018, John Doe'
-author = u'John Doe'
+project = 'Muj Projekt'
+copyright = '2018, Autor'
+author = 'Autor'
 
 # The short X.Y version
-version = u''
+version = ''
 # The full version, including alpha/beta/rc tags
-release = u'1.0'
+release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,12 +39,17 @@ release = u'1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
+    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+#templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -60,15 +65,15 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'cs'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = None
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -76,18 +81,18 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'haiku'
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-#html_theme_options = {"nosidebar": True}
+# html_theme_options = {}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -103,7 +108,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MyProjectdoc'
+htmlhelp_basename = 'MujProjektdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -130,8 +135,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'MyProject.tex', u'MyProject Documentation',
-     u'John Doe', 'manual'),
+    (master_doc, 'MujProjekt.tex', 'Muj Projekt Documentation',
+     'Autor', 'manual'),
 ]
 
 
@@ -140,7 +145,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'myproject', u'MyProject Documentation',
+    (master_doc, 'mujprojekt', 'Muj Projekt Documentation',
      [author], 1)
 ]
 
@@ -151,13 +156,36 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MyProject', u'MyProject Documentation',
-     author, 'MyProject', 'One line description of project.',
+    (master_doc, 'MujProjekt', 'Muj Projekt Documentation',
+     author, 'MujProjekt', 'One line description of project.',
      'Miscellaneous'),
 ]
 
 
+# -- Options for Epub output -------------------------------------------------
+
+# Bibliographic Dublin Core info.
+epub_title = project
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+
+# A unique identification for the text.
+#
+# epub_uid = ''
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+
 # -- Extension configuration -------------------------------------------------
+
+# -- Options for intersphinx extension ---------------------------------------
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'https://docs.python.org/': None}
 
 # -- Options for todo extension ----------------------------------------------
 
