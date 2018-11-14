@@ -2,7 +2,7 @@ Direktivy
 =========
 
 .. code-block:: rest
-   :caption: Obecná syntaxe
+   :caption: Obecná syntaxe direktivy
 
    .. nazev:: [argumenty...]
       [:volba:]
@@ -12,36 +12,45 @@ Direktivy
 
       i víceblokové tělo
 
-Obsahový strom / osnova (S)
----------------------------
+Složitější struktura -- osnova (S)
+----------------------------------
+
+Propojení více souborů do jednoho celku zajišťuje direktiva :code:`toctree`.
 
 .. code-block:: rst
 
-   .. toctree:: Obsah
-
+   .. toctree::
+      :caption: Obsah
+      :maxdepth: 2
       :numbered:
+      :glob:
 
       UvodniKapitola
       SlozenaKapitola/index
       DalsiKapitola/index
       Moduly/*
 
+Na místě, kde je uvedena direktiva, bude vygenerovaný obsah až do hloubky
+podnadpisů definovaný volbou ``maxdepth``. Pokud není uvedena, budou zahrnuty
+všechny úrovně.
+
 Obrázky (r)
 -----------
 
 image / figure
 
+.. _dir-kotva:
+
 Kotva
 -----
 
-Kotva umožňuje použití explicitní reference na téměř libovolný objekt, který
-je kotvou označen.
+Kotva umožňuje použití :ref:`explicitní reference <role-ref>` na libovolný
+oddíl nebo blokový prvek, který je kotvou označen.
 
 Kotva funguje jako identifikátor oddílu nebo bloku napříč celým projektem,
 tudíž musí být v rámci projektu unikátní.
 
-Kotvu lze použít na jakýkoli blok vč. jednoduchého odstavce. V případě odkazů
-na bloky, které nemají titulek, je potřeba v referenci uvést popisek.
+Kotvu lze použít na jakýkoli blok vč. jednoduchého odstavce.
 
 .. code-block:: rst
 
@@ -65,6 +74,8 @@ Ukázka kódu (r/S)
    .. code-block:: Python
 
       print("Hello World!)
+
+.. _dir-tabulky:
 
 Zjednodušené tabulky (r)
 ------------------------

@@ -19,9 +19,9 @@ Odstavce mohou obsahovat :doc:`řádkové prvky <Inline>`.
 Citáty
 ------
 
-   Bloková citace. (~ odsazený odstavec)
+   Bloková citát. (~ odsazený odstavec)
 
-   Chceme-li pokračovat v citaci dalším odstavcem,
+   Chceme-li pokračovat v citátu dalším odstavcem,
    musíme jej odsadit stejně.
 
 Blokové literály
@@ -49,17 +49,18 @@ Blokové literály
 
 Viz také :ref:`direktivy pro zdrojový kód <dir-zdrojaky>`.
 
-Line bloky
-----------
+..
+   Line bloky
+   ----------
 
-| Blokový prvek,
-| který
-  zachovává
-| zalomení řádků.
-|
-| Skvělý
-| pro psaní
-| poezie.
+   | Blokový prvek,
+   | který
+     zachovává
+   | zalomení řádků.
+   |
+   | Skvělý
+   | pro psaní
+   | poezie.
 
 Seznamy
 -------
@@ -68,8 +69,8 @@ Výčty nějakých logických celků.
 
 Položky seznamu mohou obsahovat další blokové prvky.
 
-Nečíslované
-^^^^^^^^^^^
+Nečíslované seznamy
+*******************
 
 .. code-block:: none
    :caption: Znaky přípustné pro označení položek nečíslovaného seznamu
@@ -118,8 +119,8 @@ Nečíslované
 Více o :rstref:`nečíslovaném seznamu <bullet-lists>`.
 
 
-Číslované
-^^^^^^^^^
+Číslované seznamy
+*******************
 
 .. sidebar:: Číslovaný seznam
 
@@ -184,9 +185,9 @@ Více o :rstref:`číslovaném seznamu <enumerated-lists>`.
 Volby programu (option list)
 ----------------------------
 
-Seznam voleb programu jako ve vypsané nápovědě programu.
+Seznam voleb programu jako v nápovědě vypsané programem.
 
-.. sidebar:: Seznam programových voleb
+.. sidebar:: Programové volby
 
    -a         Output all.
    -b         Output both (this description is
@@ -249,12 +250,13 @@ Různé syntaxe:
 
 * :rstref:`grid tables <grid-tables>`,
 * :rstref:`simple tables <simple-tables>`,
-* použití direktiv (csv table, list table)
+* použití direktiv (csv table, list table) -- viz :ref:`dir-tabulky`
 
 Bibliografické prvky
 --------------------
 
-.. sidebar:: Definice
+.. 
+   sidebar:: Definice
 
    Term
        Definition
@@ -277,7 +279,8 @@ Bibliografické prvky
    Term
        Definition
 
-.. sidebar:: Citace
+..
+   sidebar:: Citace
 
    .. [CIT2002] Citations are text-labeled footnotes. They may be
       rendered separately and differently from footnotes.
@@ -295,7 +298,8 @@ Bibliografické prvky
    citation.
 
 
-.. sidebar:: Poznámky pod čarou
+..
+   sidebar:: Poznámky pod čarou
 
    .. [1] A footnote contains body elements, consistently indented by at
       least 3 spaces.
@@ -344,7 +348,8 @@ Bibliografické prvky
    .. [4] Here's an unreferenced footnote, with a reference to a
       nonexistent footnote: [5]_.
 
-.. sidebar:: Informační pole
+..
+   sidebar:: Informační pole
 
    :what: Field lists map field names to field bodies, like database
           records.  They are often part of an extension syntax.  They are

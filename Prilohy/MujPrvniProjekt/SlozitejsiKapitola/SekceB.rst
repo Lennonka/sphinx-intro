@@ -1,4 +1,0 @@
-Sekce B
--------
-
-Odstavec.

@@ -193,4 +193,5 @@ extlinks = {
     'sphinx': ('https://www.sphinx-doc.org/en/1.8/%s', 'Sphinx Doc: '),
     'rstref': ('http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#%s', 'rST Ref: '),
     'rstdir': ('http://docutils.sourceforge.net/docs/ref/rst/directives.html#%s', 'rST Ref: '),
+    'rstrole': ('http://docutils.sourceforge.net/docs/ref/rst/roles.html#%s', 'rST Ref: '),
 }
