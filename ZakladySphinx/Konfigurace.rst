@@ -5,7 +5,7 @@ Soubor :file:`conf.py` obsahuje většinu nastavení, která ovlivňují zpracov
 vstupů a výstupů. Jak napovídá jeho koncovka, je psán v syntaxi Pythonu,
 a je Sphinxem spouštěn na začátku buildu (přes funkci :code:`execfile()`).
 Jeho syntaxí se tady ale zabývat nebudeme, protože přesahuje rámec této
-publikace.
+publikace, viz např. `Python Tutorial <https://docs.python.org/3/tutorial/>`_.
 
 .. rubric:: Poznámka k Python 2
 

@@ -26,6 +26,31 @@ Obsahový strom / osnova (S)
       DalsiKapitola/index
       Moduly/*
 
+Obrázky (r)
+-----------
+
+image / figure
+
+Kotva
+-----
+
+Kotva umožňuje použití explicitní reference na téměř libovolný objekt, který
+je kotvou označen.
+
+Kotva funguje jako identifikátor oddílu nebo bloku napříč celým projektem,
+tudíž musí být v rámci projektu unikátní.
+
+Kotvu lze použít na jakýkoli blok vč. jednoduchého odstavce. V případě odkazů
+na bloky, které nemají titulek, je potřeba v referenci uvést popisek.
+
+.. code-block:: rst
+
+   .. _identifikator-kotvy:
+
+   <blok nebo nadpis>
+
+
+
 .. _dir-zdrojaky:
 
 Ukázka kódu (r/S)
@@ -97,10 +122,13 @@ V textu se pak můžeme odkazát na definici pojmu pomocí role :rst:role:`term`
 a Sphinx do výstupu vygeneruje křížový odkaz do slovníku pojmů, např.
 ``:term:`slovník``` -> :term:`slovník`.
 
+.. index::
+   pair: index; entry
+
 Tvorba rejstříku (S)
 --------------------
 
-Odkaz z rejstříku na blok:
+Odkaz z rejstříku na oddíl nebo blok:
 
 .. code-block:: rst
 
@@ -137,12 +165,6 @@ Podrobně viz :rstdir:`directives-for-substitution-definitions`
    .. |lbr| raw:: latex
 
       \\
-
-Obrázky (r)
------------
-
-image / figure
-
 
 Include (r)
 -----------
